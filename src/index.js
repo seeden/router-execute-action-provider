@@ -1,5 +1,5 @@
 import React, { PropTypes, Component, createElement } from 'react';
-import action from './action';
+import routerAction from './action';
 import inherits from 'inherits';
 import hoistNonReactStatics from 'hoist-non-react-statics';
 
@@ -22,7 +22,7 @@ function createComponent(CurrentComponent) {
 
   Provider.prototype.executeAction = function executeActionMethod(action, payload, to) {
     const { router, executeAction } = this.context;
-    executeAction(action, {
+    executeAction(routerAction, {
       action,
       payload,
       to,
