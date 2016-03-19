@@ -1,6 +1,6 @@
 {
   "name": "router-execute-action-provider",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Provide fluxible`s executeAction into the compoment with third parameter redirecting user via react-router",
   "author": {
     "name": "Zlatko Fedor",
