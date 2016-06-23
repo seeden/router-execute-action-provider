@@ -1,8 +1,27 @@
-import React, { PropTypes, Component, createElement } from 'react';
+import { PropTypes } from 'react';
 import routerAction from './action';
-import inherits from 'inherits';
-import hoistNonReactStatics from 'hoist-non-react-statics';
+// import inherits from 'inherits';
+// import hoistNonReactStatics from 'hoist-non-react-statics';
+import createProvider from 'react-provide-props';
 
+const provider = createProvider('ExecuteActionWithRouterProvider', (props, context) => ({
+  executeAction: (action, payload, to) => context.executeAction(routerAction, {
+    action,
+    payload,
+    to,
+    router: context.router,
+  }),
+}), {
+  executeAction: PropTypes.func.isRequired,
+});
+
+provider.contextTypes = {
+  executeAction: PropTypes.func.isRequired,
+  router: PropTypes.object.isRequired,
+};
+
+export default provider;
+/*
 function createComponent(CurrentComponent) {
   function Provider(...args) {
     Component.apply(this, args);
@@ -50,3 +69,4 @@ export default function provide(...args) {
 
   return createComponent.apply(null, args);
 }
+*/

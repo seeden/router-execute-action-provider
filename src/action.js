@@ -1,4 +1,4 @@
-export default function(context, payload, done) {
+export default function (context, payload, done) {
   context.executeAction(payload.action, payload.payload, (err, data) => {
     if (err) {
       context.dispatch('ERROR_HANDLE', {
