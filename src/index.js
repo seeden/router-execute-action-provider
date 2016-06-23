@@ -13,12 +13,10 @@ const provider = createProvider('ExecuteActionWithRouterProvider', (props, conte
   }),
 }), {
   executeAction: PropTypes.func.isRequired,
-});
-
-provider.contextTypes = {
+}, {
   executeAction: PropTypes.func.isRequired,
   router: PropTypes.object.isRequired,
-};
+});
 
 export default provider;
 /*

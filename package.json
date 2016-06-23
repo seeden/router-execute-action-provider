@@ -1,6 +1,6 @@
 {
   "name": "router-execute-action-provider",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "Provide fluxible`s executeAction into the compoment with third parameter redirecting user via react-router",
   "author": {
     "name": "Zlatko Fedor",
@@ -32,7 +32,7 @@
     "eslint": "node ./node_modules/eslint/bin/eslint.js --ext .js,.jsx ."
   },
   "dependencies": {
-    "react-provide-props": "^1.0.2"
+    "react-provide-props": "^1.0.3"
   },
   "devDependencies": {
     "babel-cli": "^6.10.1",
